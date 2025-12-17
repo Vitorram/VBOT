@@ -1,0 +1,110 @@
+
+body { 
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; 
+    background-color: #ffffff; 
+    color: #111; 
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    min-height: 100vh; 
+    margin: 0; 
+    padding: 20px;
+}
+
+.hero { text-align: center; margin-top: 60px; margin-bottom: 30px; }
+h1 { font-size: 2.5rem; font-weight: 800; letter-spacing: -1px; margin: 0; }
+p { color: #666; margin-top: 10px; font-size: 1.1rem; }
+
+.control-area {
+    width: 100%;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 50px;
+}
+
+
+
+.search-box { 
+    background: #fff; 
+    border: 1px solid #e0e0e0; 
+    padding: 8px; 
+    border-radius: 8px; 
+    display: flex; 
+    gap: 10px; 
+}
+.search-box:focus-within { border-color: #000; }
+
+input { 
+    border: none; outline: none; font-size: 16px; 
+    padding: 12px; width: 100%; color: #000;
+}
+
+.btn-gerar { 
+    background: #000; color: #fff; border: none; 
+    padding: 12px 24px; border-radius: 6px; cursor: pointer; 
+    font-weight: 600; font-size: 14px;
+}
+.btn-gerar:hover { background: #333; }
+.btn-gerar:disabled { background: #999; }
+
+.actions {
+    display: none;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.btn-action {
+    flex: 1;
+    background: #fff;
+    color: #000;
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 13px;
+    text-align: center;
+    transition: all 0.2s;
+}
+.btn-action:hover { background: #f9f9f9; border-color: #000; }
+
+
+
+
+.timeline { 
+    width: 100%; max-width: 600px; 
+    position: relative; padding: 10px 0; display: none; 
+}
+.timeline::before { 
+    content: ''; position: absolute; left: 20px; top: 0; bottom: 0; width: 1px; background: #e0e0e0; 
+}
+
+.day-card { 
+    background: #fff; border: 1px solid #f0f0f0; border-radius: 8px; 
+    padding: 25px; margin-bottom: 30px; margin-left: 50px; 
+    position: relative; page-break-inside: avoid;
+}
+.day-card::before { 
+    content: ''; position: absolute; left: -34px; top: 28px; 
+    width: 8px; height: 8px; background: #000; 
+    border-radius: 50%; border: 4px solid #fff; 
+}
+
+.day-title { 
+    font-size: 14px; font-weight: 700; text-transform: uppercase; 
+    letter-spacing: 1px; color: #888; margin-bottom: 20px; 
+    border-bottom: 1px solid #f0f0f0; padding-bottom: 10px;
+}
+
+.activity-group { margin-bottom: 15px; }
+.activity-label { font-size: 11px; font-weight: 700; color: #000; margin-bottom: 2px; display: block; }
+.activity-text { font-size: 15px; color: #444; line-height: 1.4; }
+
+.cost { 
+    margin-top: 20px; font-size: 14px; font-weight: 600; 
+    color: #000; text-align: right; border-top: 1px solid #f0f0f0; padding-top: 10px;
+}
+
+.loading { display: none; color: #888; font-size: 14px; margin-top: 20px; }

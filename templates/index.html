@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Planejador de Viagens VBOT</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+    <div class="hero">
+        <h1>VBOT</h1>
+        <p>Seu roteiro de viagem em segundos.</p>
+    </div>
+
+    <div class="control-area">
+        <div class="search-box">
+            <input type="text" id="cidadeInput" placeholder="Para onde vamos?">
+            <button class="btn-gerar" onclick="gerarRoteiro()" id="btnGerar">Gerar</button>
+        </div>
+
+        <div class="actions" id="actionButtons">
+            <button class="btn-action" onclick="baixarPDF()"> Baixar PDF</button>
+            <button class="btn-action" onclick="copiarTexto()" id="btnCopiar"> Copiar Texto</button>
+        </div>
+    </div>
+
+    <div class="loading" id="loading">Criando roteiro...</div>
+
+    <div class="timeline" id="timeline"></div>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
